@@ -12,7 +12,7 @@ REFLEX_GENERATE_DICTIONARY(fccphysics-MyAnalysisDict ${headers} SELECTION select
 
 add_library(fccphysics-myanalysis SHARED ${sources} ${headers} fccphysics-MyAnalysisDict.cpp)
 
-target_link_libraries(fccphysics-myanalysis utilities datamodel datamodelDict podio ${ROOT_LIBRARIES} ${ROOT_COMPONENT_LIBRARIES})
+target_link_libraries(fccphysics-myanalysis ${ROOT_LIBRARIES} ${ROOT_COMPONENT_LIBRARIES})
 
 install(TARGETS fccphysics-myanalysis DESTINATION lib)
 

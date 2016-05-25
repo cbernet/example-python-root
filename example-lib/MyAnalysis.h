@@ -4,17 +4,9 @@
 #include "TObject.h"
 #include "TH1F.h"
 
-namespace podio {
-  class EventStore;
-  class ROOTReader;
-}
-
 class MyAnalysis {
  public:
   MyAnalysis();
-  void loop(const char* filename);
-  void processEvent(podio::EventStore& store, bool verbose,
-		    podio::ROOTReader& reader);
   TH1F m_h_ptc_pdgid;
  
 };
